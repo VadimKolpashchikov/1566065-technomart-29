@@ -1,0 +1,340 @@
+/* Varibles */
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #32425C;
+  --basic-extra-dark: #293449;
+  --basic-white: #FFFFFF;
+  --basic-extra-light: #F9F5F0;
+  --basic-red: #EE3643;
+  --basic-light-blue: #F1F5F7;
+  --basic-extra-blue:#F3F7F8;
+  /*Header*/
+  --basic-green: #63A63E;
+  --basic-special-green:#5FBB2D;
+  /*Main*/
+  --basic-light-yellow: #FFBF47;
+  --basic-blue: #3BBCE3;
+  --basic-purple: #DC91D8;
+  --basic-light-green: #8ED78F;
+  --basic-yellow: #FFC047;
+  --basic-gray: #A9A9A9;
+  --basic-special-gray:#EAEAEA;
+  --basic-special-red: #CA2C37;
+  /*Footer*/
+  --special-yellow: #FFD180;
+  --special-dark:#212A3A;
+}
+
+/* Global */
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.page a{
+  text-decoration: none;
+}
+
+.page ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+
+.main-header{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: var(--basic-extra-blue);
+}
+
+
+.main-function{
+  background-color: var(--basic-extra-dark);
+}
+
+.main-function a{
+  color: var(--basic-white);
+}
+.checkout{
+  background-color: var(--basic-green);
+}
+
+.checkout:hover,.checkout:focus{
+  background-color: var(--basic-special-green);
+}
+
+.header-info{
+  color: var(--basic-red);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.header-tel{
+  color: var(--basic-red);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  border: var(--basic-white) 3px solid;
+  padding-bottom: 8px;
+  padding-left: 74px;
+  padding-right: 45px;
+  padding-top: 7px;
+}
+
+.header-address{
+  color: var(--basic-dark);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.user-header a{
+  color: var(--basic-black);
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.login-link:hover, .registration-link:hover,
+.login-link:focus, .registration-link:focus {
+  color: var(--basic-red);
+}
+
+/*Header navigation*/
+
+.main-nav{
+  background-color: var(--basic-dark);
+  border-bottom: var(--basic-extra-dark) 4px solid;
+}
+
+.main-nav a {
+  color: var(--basic-white);
+}
+
+.main-nav li:hover, .main-nav li:focus{
+  background-color: var(--basic-extra-dark);
+}
+
+/*Main*/
+
+.button{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+
+.button:hover, .button:active{
+  background-color: var(--basic-special-red);
+}
+
+.offers-list li:nth-child(1){
+  background-color: var(--basic-light-yellow);
+}
+
+.offers-list li:nth-child(2){
+  background-color: var(--basic-blue);
+}
+
+.offers-list li:nth-child(3){
+  background-color: var(--basic-purple);
+}
+
+.offers-list li:nth-child(4){
+  background-color: var(--basic-light-green);
+}
+
+.offers-list li:nth-child(5){
+  background-color: var(--basic-yellow);
+}
+
+/*Товары*/
+
+.offers{
+  font-family: "Cuprum", Arial, serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.offers-item a{
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  /*background-color: var(--basic-white);*/
+}
+
+.new_shield {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.slider{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  background-color: var(--basic-dark);
+}
+
+.slider p{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main-title{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: var(--basic-extra-light);
+}
+
+.goods-item{
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  border: var(--basic-special-gray) 1px solid;
+}
+
+.goods-item h3{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.goods-item del{
+  color: var(--basic-gray);
+}
+
+.goods-item span{
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.manufacturers-logos a{
+  border: var(--basic-special-gray) 1px solid;
+}
+
+/*Сервисы*/
+
+.services{
+  background-color: var(--basic-light-blue);
+}
+
+.services h2{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services h3{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+}
+
+.Services-button{
+  font-family: "Cuprum", Arial, serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  align-items: center;
+  color: var(--basic-white);
+  background-color: var(--basic-dark);
+}
+
+.Services-button:hover {
+  background-color: var(--basic-extra-dark);
+}
+
+.Services-button:active {
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+}
+
+/*Инфо*/
+
+.info span{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.transportation-list{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts h2{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+/*Footer*/
+
+.page-footer{
+  font-family: "Cuprum", Arial, serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+.main-footer-function{
+  background-color: var(--basic-dark);
+}
+
+.footer-contacts{
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--basic-extra-dark);
+}
+
+.footer-site-nav a{
+  color: var(--basic-white);
+}
+
+.footer-offers-nav a, .footer-address a{
+  color: var(--special-yellow);
+}
+
+.social-img{
+  background-color: var(--special-dark);
+}
+
+.footer-site-nav a:hover, .footer-offers-nav a:hover, .footer-address a:hover{
+  text-decoration-line: underline;
+}
+
+.footer-address a:active{
+  color: var(--basic-red);
+}
+
+.social-img:hover, .social-img:active{
+  background-color: var(--basic-red);
+}
