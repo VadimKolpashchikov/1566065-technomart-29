@@ -12,12 +12,16 @@
   /*Header*/
   --basic-green: #63A63E;
   --basic-special-green:#5FBB2D;
+  --basic-transparent-white: rgba(255,255,255,0.5);
+  --basic-dull-gray: #C5C5C5;
+  --basic-dull-dark: #161D29;
   /*Main*/
   --basic-light-yellow: #FFBF47;
   --basic-blue: #3BBCE3;
   --basic-purple: #DC91D8;
   --basic-light-green: #8ED78F;
   --basic-yellow: #FFC047;
+  --basic-more-transparent-white: rgba(255,255,255,0.3);
   --basic-gray: #A9A9A9;
   --basic-special-gray:#EAEAEA;
   --basic-special-red: #CA2C37;
@@ -68,9 +72,48 @@ img{
   background-color: var(--basic-extra-dark);
 }
 
+.search input{
+  background-color: var(--basic-extra-dark);
+  border: 0;
+}
+
+.search input::-webkit-input-placeholder{
+  color: var(--basic-white);
+}
+
+.search input::-moz-placeholder{
+  color: var(--basic-white);
+}
+
+.search input:-moz-placeholder{
+  color: var(--basic-white);
+}
+
+.search input::-ms-input-placeholder{
+  color: var(--basic-white);
+}
+
+.search input:-ms-input-placeholder{
+  color: var(--basic-white);
+}
+
+.search:hover input, .search:focus input{
+  color: var(--basic-black);
+  background-color:  var(--basic-white);
+}
+
 .main-function a{
   color: var(--basic-white);
 }
+
+/*?<a>?*/.main-function:active .bookmarks, .main-function:active .basket, .main-function:active .checkout{
+  color: var(--basic-transparent-white);
+}
+
+.bookmarks:active, .basket:active{
+  background-color: var(--basic-dull-dark);
+}
+
 .checkout{
   background-color: var(--basic-green);
 }
@@ -115,6 +158,10 @@ img{
   color: var(--basic-red);
 }
 
+.login-link:active, .registration-link:active{
+  color: var( --basic-dull-gray);
+}
+
 /*Header navigation*/
 
 .main-nav{
@@ -131,6 +178,10 @@ img{
 }
 
 /*Main*/
+
+.offers h1{
+  display: none;
+}
 
 .button{
   font-family: "Cuprum", Arial, serif;
@@ -179,7 +230,7 @@ img{
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
-  /*background-color: var(--basic-white);*/
+  background-color: var(--basic-more-transparent-white);
 }
 
 .new_shield {
@@ -267,7 +318,7 @@ img{
   background-color: var(--basic-dark);
 }
 
-.Services-button:hover {
+.Services-button:hover, .Services-button:focus {
   background-color: var(--basic-extra-dark);
 }
 
@@ -277,6 +328,10 @@ img{
 }
 
 /*Инфо*/
+
+.info h2{
+  display: none;
+}
 
 .info span{
   font-family: "Cuprum", Arial, serif;
@@ -323,11 +378,16 @@ img{
   color: var(--special-yellow);
 }
 
+.footer-address address{
+  font-style: normal;
+}
+
 .social-img{
   background-color: var(--special-dark);
 }
 
-.footer-site-nav a:hover, .footer-offers-nav a:hover, .footer-address a:hover{
+.footer-site-nav a:hover, .footer-offers-nav a:hover, .footer-address a:hover,
+.footer-site-nav a:focus, .footer-offers-nav a:focus, .footer-address a:focus{
   text-decoration-line: underline;
 }
 
