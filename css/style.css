@@ -96,7 +96,6 @@ img{
   color: var(--basic-white);
 }
 
-.search input:hover,
 .search input:focus{
   color: var(--basic-black);
   background-color:  var(--basic-white);
@@ -188,7 +187,6 @@ img{
   color: var(--basic-transparent-white);
 }
 
-
 /*Main*/
 /*Торыва*/
 .offers h1{
@@ -204,8 +202,12 @@ img{
   background-color: var(--basic-red);
 }
 
-.button:hover, .button:active{
+.button:hover{
   background-color: var(--basic-special-red);
+}
+
+.button:active{
+  background-color: var(--basic-dark-red);
 }
 
 .offers-list li:nth-child(1){
@@ -227,8 +229,6 @@ img{
 .offers-list li:nth-child(5){
   background-color: var(--basic-yellow);
 }
-
-
 
 .offers{
   font-family: "Cuprum", Arial, sans-serif;
@@ -273,12 +273,15 @@ img{
   line-height: 24px;
 }
 
-.main-title{
+.main-title {
+  background-color: var(--basic-extra-light);
+}
+
+.main-title h2{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  background-color: var(--basic-extra-light);
 }
 
 .goods-item{
@@ -356,7 +359,7 @@ img{
   display: none;
 }
 
-.info span{
+.company-name{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -389,9 +392,6 @@ img{
   color: var(--basic-white);
   background-color: var(--basic-dark);
 }
-.main-footer-function{
-
-}
 
 .footer-contacts{
   font-size: 16px;
@@ -403,12 +403,9 @@ img{
   color: var(--basic-white);
 }
 
-.footer-offers-nav a, .footer-address a{
+.footer-offers-nav a,
+.footer-address a{
   color: var(--special-yellow);
-}
-
-.footer-address address{
-  font-style: normal;
 }
 
 .footer-social{
@@ -419,7 +416,7 @@ img{
   text-align: left;
 }
 
-.footer-address address{
+.footer-address p{
   text-align: right;
 }
 
@@ -446,7 +443,8 @@ img{
   text-decoration-line: none;
 }
 
-.social-img:hover, .social-img:active{
+.social-img:hover,
+.social-img:active{
   background-color: var(--basic-red);
 }
 
