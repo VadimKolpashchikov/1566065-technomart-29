@@ -1,37 +1,45 @@
 <!doctype html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт/Каталог</title>
+    <title>HTML Academy: Техномарт</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
+    >
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-      <div>
-        <a href="index.html">
-          <img src="https://via.placeholder.com/220x47" alt="Логотип ТЕХНОМАРТ" width="220" height="47">
+  <body class="page-body">
+    <header class="main-header">
+      <div class="main-function">
+        <a class="main-logo" href="index.html">
+          <img src="https://via.placeholder.com/108x18" alt="Логотип ТЕХНОМАРТ" width="108" height="18">
         </a>
-        <form>
-          <input aria-label="поиск" type="search" value="Поиск:">
+        <form class="search" action="https://echo.htmlacademy.ru" method="get">
+          <input aria-label="Поиск" type="search" placeholder="Поиск:">
         </form>
-        <a href="#">Закладки: 0</a>
-        <a href="#">Корзина: 10</a>
-        <a href="#">Оформить заказ</a>
+        <div class="function-button">
+          <a class="bookmarks" href="#">Закладки: 0</a>
+          <a class="basket" href="#">Корзина: 0</a>
+          <a class="checkout" href="#">Оформить заказ</a>
+        </div>
       </div>
-      <div>
-        <p>Интернет-магазин строительных матерьялов и инструментов для ремонта</p>
-        <a href="tel:+78125550555">+7(812)555-05-55</a>
-        <p>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <p class="header-info">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <div class="header-contacts">
+        <a class="header-tel" href="tel:+78125550555">+7(812)555-05-55</a>
+        <p class="header-address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
-      <div>
+      <div class="user-name">
         <a href="#">Равшан Джамшутович</a>
-       <!--Иконка выхода со стеролочкой декоративная, добавится со стилями-->
+        <!--Иконка выхода со стеролочкой декоративная, добавится со стилями-->
       </div>
-      <div>
-        <a href="#">Мои заказы</a>
-        <a href="#">Личный кабинет</a>
+      <div class="lk-user-header">
+        <a class="order" href="#">Мои заказы</a>
+        <a class="personal Area" href="#">Личный кабинет</a>
       </div>
-      <nav>
-        <ul>
+      <nav class="main-nav">
+        <ul class="site-nav">
           <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="#">Каталог</a></li>
@@ -43,62 +51,66 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Каталог товаров интернет-магазина «Техномарт»</h1>
+    <main class="center-catalog">
+      <h1 class="display-none">Каталог товаров интернет-магазина «Техномарт»</h1>
       <div>
         <!--Иконка домика и стрелки декоративные, добавятся со стилями-->
         <a href="#">Каталог</a>
         <a href="#">Инструмент</a>
         <a href="#">Перфораторы</a>
       </div>
-      <h2>ПЕРФОРАТОРЫ</h2>
-      <div>
+      <h2 class="choice">ПЕРФОРАТОРЫ</h2>
+      <div class="filter">
         <h3>ФИЛЬТР:</h3>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="price">
             <legend>ЦЕНА:</legend>
             <!--Ползунок фильтра цены здесь-->
             <input type="text" name="price floor" value="0" aria-label="price floor">
             <input type="text" name="maximum price" value="30000" aria-label="maximum price">
           </fieldset>
-          <fieldset>
-            <legend>ПРОИЗВОДИТЕЛИ:</legend>
-            <label>
-              BOSCH
-              <input type="checkbox" name="manufacturers" value="BOSCH" checked>
-            </label>
-            <label>
-              ИНТЕРСКОЛ
-              <input type="checkbox" name="manufacturers" value="ИНТЕРСКОЛ">
-            </label>
-            <label>
-              MAKITA
-              <input type="checkbox" name="manufacturers" value="MAKITA" checked>
-            </label>
-            <label>
-              DEWALT
-              <input type="checkbox" name="manufacturers" value="DEWALT">
-            </label>
-            <label>
-              HITACHI
-              <input type="checkbox" name="manufacturers" value="HITACHI">
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>ПИТАНИЕ:</legend>
-            <label>
-              Аккумуляторные
-              <input type="checkbox" name="supply" value="Аккумуляторные" checked>
-            </label>
-            <label>
-              Сетевые
-              <input type="checkbox" name="supply" value="Сетевые">
-            </label>
-          </fieldset>
+          <div  class="filter-border">
+            <fieldset class="filter-manufacturers">
+              <legend>ПРОИЗВОДИТЕЛИ:</legend>
+              <label class="check">
+                BOSCH
+                <input type="checkbox" name="manufacturers" value="BOSCH" checked>
+              </label>
+              <label class="check">
+                ИНТЕРСКОЛ
+                <input class="check-input" type="checkbox" name="manufacturers" value="ИНТЕРСКОЛ">
+              </label>
+              <label class="check">
+                MAKITA
+                <input class="check-input" type="checkbox" name="manufacturers" value="MAKITA" checked>
+              </label>
+              <label class="check">
+                DEWALT
+                <input class="check-input" type="checkbox" name="manufacturers" value="DEWALT">
+              </label>
+              <label class="check">
+                HITACHI
+                <input class="check-input" type="checkbox" name="manufacturers" value="HITACHI">
+              </label>
+            </fieldset>
+          </div>
+          <div class="filter-border">
+            <fieldset class="filter-supply">
+              <legend>ПИТАНИЕ:</legend>
+              <label class="radio">
+                Аккумуляторные
+                <input class="radio-input" type="radio" name="supply" value="accumulator" checked>
+              </label>
+              <label class="radio">
+                Сетевые
+                <input class="radio-input" type="radio" name="supply" value="electrical network">
+              </label>
+            </fieldset>
+          </div>
           <button type="submit">Показать</button>
         </form>
       </div>
-      <div>
+      <div class="sorting">
         <h3>СОРТИРОВКА:</h3>
         <a href="#">По цене</a>
         <a href="#">По типу</a>
@@ -106,73 +118,73 @@
         <img src="https://via.placeholder.com/11x10" alt="Сортиролвка вверх" width="11" height="10">
         <img src="https://via.placeholder.com/11x10" alt="Сортировка вниз" width="11" height="10">
       </div>
-      <section>
-        <h2>Товары каталога</h2>
-        <article>
+      <section class="goods">
+        <h2  class="display-none">Товары каталога</h2>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
           <del>30500 Р.</del>
-          25500 Р.
+          <span>25500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
           <del>30500 Р.</del>
-          25500 Р.
+          <span>25500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <span class="new_shield">NEW</span>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
           <del>30500 Р.</del>
-          25500 Р.
+          <span>25500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 3000</h3>
           <span class="new_shield">NEW</span>
           <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
           <del>22500 Р.</del>
-          15500 Р.
+          <span>15500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
           <del>30500 Р.</del>
-          25500 Р.
+          <span>25500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 2000</h3>
           <span class="new_shield">NEW</span>
           <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-          12500 Р.
+          <span>12500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 3000</h3>
           <span class="new_shield">NEW</span>
           <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
           <del>22500 Р.</del>
-          15500 Р.
+          <span>15500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
           <del>30500 Р.</del>
-          25500 Р.
+          <span>25500 Р.</span>
         </article>
-        <article>
+        <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 2000</h3>
           <span class="new_shield">NEW</span>
           <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-          12500 Р.
+          <span>12500 Р.</span>
         </article>
       </section>
-      <div>
+      <div class="page-number">
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
         <a href="#">Следующая</a>
       </div>
-      <div>
+      <div class="puncher-info">
         <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий
@@ -185,49 +197,51 @@
       </div>
     </main>
 
-    <footer>
-      <div>
-        <a href="index.html">
+    <footer class="page-footer main-footer">
+      <div class="main-footer-function">
+        <a class="footer-logo main-logo" href="index.html">
           <img src="https://via.placeholder.com/220x68" alt="Логотип ТЕХНОМАРТ" width="220" height="68">
         </a>
-      </div>
-      <div>
-        <nav>
-          <ul>
+        <div class="footer-nav">
+          <ul class="footer-site-nav">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer-offers-nav">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
             <li><a href="#">Инструмент</a></li>
             <li><a href="#">Спецпредложения</a></li>
           </ul>
-        </nav>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+        </div>
+        <p class="footer-local-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
       </div>
-      <div>
-        <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
-        <a href="#">
-          <img src="https://via.placeholder.com/44x44" alt="Vk.com" width="44" height="44">
-        </a>
-        <a href="#">
-          <img src="https://via.placeholder.com/44x44" alt="Facebook.com" width="44" height="44">
-        </a>
-        <a href="#">
-          <img src="https://via.placeholder.com/44x44" alt="Twitter.com" width="44" height="44">
-        </a>
-      </div>
-      <div>
-        <address>
-          Обратная связь:
-          <a href="#">mail@htmlacademy.ru</a>
-        </address>
-        <address>
-          Разработано-
-          <a href="#">htmlacademy.ru</a>
-        </address>
+      <div class="footer-contacts">
+        <div class="footer-social">
+          <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
+          <a class="social-img" href="#">
+            <img src="https://via.placeholder.com/44x44" alt="Vk.com" width="44" height="44">
+          </a>
+          <a class="social-img" href="#">
+            <img src="https://via.placeholder.com/44x44" alt="Facebook.com" width="44" height="44">
+          </a>
+          <a class="social-img" href="#">
+            <img src="https://via.placeholder.com/44x44" alt="Twitter.com" width="44" height="44">
+          </a>
+        </div>
+        <div class="footer-address">
+          <p>
+            Обратная связь:
+            <a class="address-link" href="#">mail@htmlacademy.ru</a>
+          </p>
+          <p>
+            Разработано-
+            <a class="address-link" href="#">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
     </footer>
   </body>
