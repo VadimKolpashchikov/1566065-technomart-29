@@ -65,7 +65,11 @@ img{
 }
 
 .display-none{
-  display: none;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /* Header */
@@ -486,7 +490,7 @@ img{
 
 /*Main catalog*/
 
-.center-catalog a{
+.breadcrumbs .breadcrumbs-item{
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -498,6 +502,7 @@ img{
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  color: var(--basic-dark);
   background-color: var(--basic-background);
 }
 
@@ -554,40 +559,61 @@ img{
   border-top: var(--basic-special-gray) 1px solid;
 }
 
-.sorting a{
+.sorting .sorting-item{
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-transparent-black);
   text-decoration: underline;
-  text-decoration-style: dashed;
+  text-decoration-style: dotted;
   text-decoration-color: var(--basic-red);
 }
 
-.sorting a:hover,
-.sorting a:focus{
-  color: var(--basic-black);
-  text-decoration-style: solid;
-}
-
-.sorting a:active{
+.sorting .sorting-item-active{
   color: var(--basic-red);
   text-decoration:none;
 }
 
-.page-number a{
+.sorting .sorting-item:hover:not(.sorting-item-active),
+.sorting .sorting-item:focus:not(.sorting-item-active){
+  color: var(--basic-black);
+  text-decoration-style: solid;
+}
+
+.sorting .sorting-item:active:not(.sorting-item-active){
+  color: var(--basic-red);
+  text-decoration-style: solid;
+}
+
+.paginatinon a{
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-black);
   border: var(--basic-special-light-gray) 1px solid;
+  border-radius: 2px;
 }
 
-.page-number a:nth-child(1){
+.paginatinon-number{
+  padding: 10px 15px 10px 15px;
+}
+
+.paginatinon-next{
+  padding: 10px 31.5px 10px 31.5px;
+}
+
+.paginatinon .paginatinon-number-active{
+  color: var(--basic-white);
   background-color: var(--basic-red);
+  border-color: var(--basic-red);
 }
 
-.page-number a:active{
+.paginatinon a:hover:not(.paginatinon-number-active),
+.paginatinon a:focus:not(.paginatinon-number-active){
+  border-color: var(--basic-dull-gray);
+}
+
+.paginatinon a:active:not(.paginatinon-number-active){
   border-color: var(--basic-red);
 }
 

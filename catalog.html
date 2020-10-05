@@ -31,8 +31,13 @@
         <p class="header-address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <div class="user-name">
+        <a class="icon-user" href="#">
+          <img src="https://via.placeholder.com/20x18" alt="Иконка пользователя" width="20" height="18">
+        </a>
         <a href="#">Равшан Джамшутович</a>
-        <!--Иконка выхода со стеролочкой декоративная, добавится со стилями-->
+        <a class="icon-login" href="#">
+          <img src="https://via.placeholder.com/20x17" alt="Иконка выхода" width="20" height="17">
+        </a>
       </div>
       <div class="lk-user-header">
         <a class="order" href="#">Мои заказы</a>
@@ -53,11 +58,13 @@
 
     <main class="center-catalog">
       <h1 class="display-none">Каталог товаров интернет-магазина «Техномарт»</h1>
-      <div>
-        <!--Иконка домика и стрелки декоративные, добавятся со стилями-->
-        <a href="#">Каталог</a>
-        <a href="#">Инструмент</a>
-        <a href="#">Перфораторы</a>
+      <div class="breadcrumbs">
+        <a class="icon-home" href="index.html">
+          <img src="https://via.placeholder.com/14x12" alt="Иконка на главную" width="14" height="12">
+        </a>
+        <a class="breadcrumbs-item" href="#">Каталог</a>
+        <a class="breadcrumbs-item" href="#">Инструмент</a>
+        <a class="breadcrumbs-item" href="#">Перфораторы</a>
       </div>
       <h2 class="choice">ПЕРФОРАТОРЫ</h2>
       <div class="filter">
@@ -69,7 +76,7 @@
             <input type="text" name="price floor" value="0" aria-label="price floor">
             <input type="text" name="maximum price" value="30000" aria-label="maximum price">
           </fieldset>
-          <div  class="filter-border">
+          <div class="filter-border">
             <fieldset class="filter-manufacturers">
               <legend>ПРОИЗВОДИТЕЛИ:</legend>
               <label class="check">
@@ -112,14 +119,18 @@
       </div>
       <div class="sorting">
         <h3>СОРТИРОВКА:</h3>
-        <a href="#">По цене</a>
-        <a href="#">По типу</a>
-        <a href="#">По функционалу</a>
-        <img src="https://via.placeholder.com/11x10" alt="Сортиролвка вверх" width="11" height="10">
-        <img src="https://via.placeholder.com/11x10" alt="Сортировка вниз" width="11" height="10">
+        <a class="sorting-item sorting-item-active" href="#">По цене</a>
+        <a class="sorting-item" href="#">По типу</a>
+        <a class="sorting-item" href="#">По функционалу</a>
+        <a class="icon-sorting-up" href="#">
+          <img src="https://via.placeholder.com/11x10" alt="Сортиролвка вверх" width="11" height="10">
+        </a>
+        <a class="icon-sorting-down" href="#">
+          <img src="https://via.placeholder.com/11x10" alt="Сортировка вниз" width="11" height="10">
+        </a>
       </div>
       <section class="goods">
-        <h2  class="display-none">Товары каталога</h2>
+        <h2 class="display-none">Товары каталога</h2>
         <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
@@ -178,11 +189,11 @@
           <span>12500 Р.</span>
         </article>
       </section>
-      <div class="page-number">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">Следующая</a>
+      <div class="paginatinon">
+        <a class="paginatinon-number paginatinon-number-active" href="#">1</a>
+        <a class="paginatinon-number" href="#">2</a>
+        <a class="paginatinon-number" href="#">3</a>
+        <a class="paginatinon-next" href="#">Следующая</a>
       </div>
       <div class="puncher-info">
         <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
