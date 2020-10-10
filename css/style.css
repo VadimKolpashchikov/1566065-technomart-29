@@ -15,6 +15,9 @@
   --basic-transparent-white: rgba(255,255,255,0.5);
   --basic-dull-gray: #C5C5C5;
   --basic-dull-dark: #161D29;
+  --basic-icon-dark: #3D546F;
+  --basic-phone-gray: #B7BFC8;
+  --basic-logo-red: #8A1F27;
   /*Main*/
   --basic-light-yellow: #FFBF47;
   --basic-blue: #3BBCE3;
@@ -30,6 +33,12 @@
   --basic-special-light-gray: #E5E5E5;
   --basic-filter-gray: #F7F3EC;
   --basic-transparent-black: rgba(0,0,0,0.3);
+  --basic-transparented-black: rgba(0,0,0,0.25);
+  --basic-shadow: rgba(0, 0, 0, 0.15);
+  --basic-img-shadow: rgba(0, 0, 0, 0.25);
+  --basic-botton-green: #367315;
+  --basic-special-button-green: #518534;
+  --basic-button-transparent-dark: rgba(50,66,92,0.5);
   /*Footer*/
   --special-yellow: #FFD180;
   --special-transparent-yellow: rgba(255,209,128,0.5);
@@ -87,10 +96,16 @@ img{
 
 .main-logo{
   background-color: var(--basic-red);
+  border-bottom: 4px var(--basic-logo-red) solid;
 }
 
 .main-function .main-logo:active{
   background-color: var(--basic-dark-red);
+}
+
+.search-icon{
+  fill: var(--basic-white);
+  opacity: 0.3;
 }
 
 .search input{
@@ -111,6 +126,16 @@ img{
   background-color:  var(--basic-white);
 }
 
+.search:hover .search-icon{
+  opacity: 1;
+}
+
+.search input:focus~.search-icon{
+  fill: var(--basic-red);
+  opacity: 1;
+  background-color:  var(--basic-white);
+}
+
 .main-function a{
   color: var(--basic-white);
 }
@@ -118,6 +143,24 @@ img{
 .function-button a:active{
   color: var(--basic-transparent-white);
   background-color: var(--basic-dull-dark);
+}
+
+.function-button svg,
+.icon-buy{
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
+
+.bookmarks:hover svg,
+.basket:hover svg,
+.bookmarks:focus svg,
+.basket:focus svg{
+  opacity: 1;
+}
+
+.bookmarks:active svg,
+.basket:active svg{
+  opacity: 0.3;
 }
 
 .checkout{
@@ -149,6 +192,10 @@ img{
   padding: 7px 45px 8px 74px;
 }
 
+.icon-phone{
+  fill: var(--basic-phone-gray);
+}
+
 .header-address{
   color: var(--basic-dark);
   font-size: 14px;
@@ -174,7 +221,21 @@ img{
 
 .login-link:active,
 .registration-link:active{
-  color: var( --basic-dull-gray);
+  color: var(--basic-dull-gray);
+}
+
+.icon-login{
+  fill: var(--basic-dull-gray);
+}
+
+
+.login-link:hover svg,
+.login-link:focus svg{
+  fill: var(--basic-icon-dark);
+}
+
+.login-link:active svg{
+  fill: var(--basic-dull-gray);
 }
 
 /*Header navigation*/
@@ -215,6 +276,10 @@ img{
 
 .button:active{
   background-color: var(--basic-dark-red);
+}
+
+.buy{
+
 }
 
 .offers-list li:nth-child(1){
@@ -261,6 +326,10 @@ img{
   background-color: var(--basic-transparent-dark-gray);
 }
 
+.offers-icon{
+  fill: var(--basic-white);
+}
+
 .new_shield{
   font-size: 14px;
   line-height: 18px;
@@ -278,6 +347,10 @@ img{
 .slider p{
   font-size: 18px;
   line-height: 24px;
+}
+
+.slider-top{
+  background-color: var(--basic-transparented-black);
 }
 
 .main-title{
@@ -314,9 +387,67 @@ img{
   background-color: var(--basic-red);
 }
 
+.goods-item:hover{
+  box-shadow: 0 4px 20px var(--basic-shadow);
+}
+
+.button-buy{
+  background-color: var(--basic-green);
+  padding: 10px 12px 10px 25px;
+  box-shadow: inset 0 -3px 0 var(--basic-botton-green);
+  border-radius: 2px;
+}
+
+.button-in-bookmarks{
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  padding: 11px 34px 9px 33px;
+  border: 3px solid var(--basic-botton-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.icon-buy{
+  padding: 0 0 3px 5px;
+}
+
+.button-buy:hover,
+.button-buy:focus{
+  background-color: var(--basic-special-green);
+}
+
+.button-buy:active{
+  background-color: var(--basic-special-button-green);
+}
+
+.button-in-bookmarks:hover,
+.button-in-bookmarks:focus{
+  background-color: var(--basic-white);
+  border-color: var(--basic-dark);
+}
+
+.button-in-bookmarks:active{
+  border-color: var(--basic-button-transparent-dark);
+}
+
 .manufacturers-logos a{
   border: var(--basic-special-gray) 1px solid;
 }
+
+.logo:hover,
+.logo:focus{
+  box-shadow: 0 4px 20px var(--basic-shadow);
+}
+
+.logo:active{
+  box-shadow: 0 4px 20px var(--basic-shadow);
+  opacity: 0.5;
+}
+
+.logo:active img{
+  box-shadow: 0 4px 4px var(--basic-img-shadow);
+}
+
 
 /*Services*/
 
@@ -375,11 +506,6 @@ img{
   line-height: 24px;
 }
 
-.transportation-list li::before{
-  content: '\2d';
-  color: var(--basic-red);
-}
-
 .contacts h2{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
@@ -425,6 +551,10 @@ img{
 
 .social-img{
   background-color: var(--special-dark);
+}
+
+.social-icon{
+  fill: var(--basic-white);
 }
 
 .footer-site-nav a:hover,
