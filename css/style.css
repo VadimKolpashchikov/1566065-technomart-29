@@ -109,12 +109,18 @@ img{
 .search-icon{
   fill: var(--basic-white);
   opacity: 0.3;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 8px 13px 17px;
 }
 
 .search input{
   background-color: var(--basic-extra-dark);
   border: 0;
   outline: none;
+  width: 236px;
+  height: 42px;
+  padding: 0;
 }
 
 .search input::-ms-input-placeholder{
@@ -246,6 +252,14 @@ img{
 .main-nav{
   background-color: var(--basic-dark);
   border-bottom: var(--basic-extra-dark) 4px solid;
+  width: 940px;
+  height: 60px;
+  text-align: center;
+
+}
+
+.main-nav ul{
+  vertical-align: middle;
 }
 
 .main-nav a{
@@ -307,6 +321,12 @@ img{
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
+}
+
+.offers-item{
+  display: inline-block;
+  width: 300px;
+  height: 123px;
 }
 
 .offers-item a{
@@ -520,6 +540,18 @@ img{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  margin-left: 130px;
+}
+
+.transportation-item::before{
+  content: "";
+  width: 25px;
+  height: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/red-line.svg");
+  background-repeat: no-repeat;
+  padding-right: 12px;
 }
 
 .contacts h2{
@@ -542,6 +574,11 @@ img{
   font-size: 16px;
   line-height: 18px;
   background-color: var(--basic-extra-dark);
+}
+
+.site-nav li{
+  display: inline;
+  width: auto;
 }
 
 .footer-site-nav a{
@@ -605,30 +642,40 @@ img{
 /*Catalog*/
 /*Catalog-header*/
 
-.user-name{
-  background-color: var(--basic-white);
-}
-
-.user-name a:active{
-  color: var(--basic-dull-gray);
-}
-
-.user-name a{
+.user-name-link{
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.user-name-link:active{
+  color: var(--basic-dull-gray);
 }
 
 .icon-user{
   fill: var(--basic-dull-gray);
 }
 
-.icon-user:hover,
-.icon-user:focus{
+.user-name-link:hover .icon-user,
+.user-name-link:focus .icon-user{
   fill: var(--basic-icon-dark);
 }
 
-.icon-user:active{
+.user-name-link:active .icon-user{
+  fill: var(--basic-dull-gray);
+}
+
+.login-link-exit{
+  background-color: var(--basic-white);
+}
+
+.login-link-exit:hover .icon-login-exit,
+.login-link-exit:focus .icon-login-exit{
+  fill: var(--basic-icon-dark);
+}
+
+.login-link-exit:active .icon-login-exit{
   fill: var(--basic-dull-gray);
 }
 
@@ -638,8 +685,16 @@ img{
   color: var(--basic-dark);
 }
 
-.lk-user-link-between{
-  fill: var(--basic-dark);
+.price-shape {
+  content: "";
+  width: 6px;
+  height: 7px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/shape.svg");
+  background-repeat: no-repeat;
+  margin-left: 14px;
+  margin-right: 14px;
 }
 
 .lk-user-link:hover,
@@ -652,15 +707,6 @@ img{
 
 }
 
-.lk-user-link:hover~.lk-user-link-between,
-.lk-user-link:focus~.lk-user-link-between{
-  fill: var(--basic-red);
-}
-
-.lk-user-link:active~.lk-user-link-between{
-  fill: var(--basic-dull-gray);
-}
-
 /*Main catalog*/
 
 .breadcrumbs .breadcrumbs-item{
@@ -670,8 +716,38 @@ img{
   color: var(--basic-black);
 }
 
-.icon-breadcrumbs{
+.icon-home-link .icon-home{
   fill: var(--basic-icon-gray);
+}
+
+.breadcrumbs-right-small{
+  content: "";
+  width: 8px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  margin-right: 17px;
+  margin-left: 17px;
+}
+
+.breadcrumbs-item:hover,
+.breadcrumbs-item:focus{
+  color: var(--basic-red);
+}
+
+.breadcrumbs-item:active{
+  color: var(--basic-transparented-black);
+}
+
+.icon-home-link:hover .icon-home,
+.icon-home-link:focus .icon-home{
+  fill: var(--basic-red);
+}
+
+.icon-home-link:active .icon-home{
+  fill: var(--basic-transparented-black);
 }
 
 .icon-sorting{
@@ -733,6 +809,21 @@ img{
 
 .range{
   background-color: var(--basic-filter-gray);
+}
+
+.price-input{
+  width: 95px;
+  height: 38px;
+  text-align: center;
+}
+
+.price-dah{
+  width: 30px;
+  height: 18px;
+  background-image: url("../img/dah.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
 }
 
 .filter label{

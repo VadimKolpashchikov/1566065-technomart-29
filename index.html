@@ -17,8 +17,10 @@
           <img src="img/logo-technomart.svg" alt="Логотип ТЕХНОМАРТ" width="108" height="18">
         </a>
         <form class="search" action="https://echo.htmlacademy.ru" method="get">
-          <input aria-label="Поиск" type="search" placeholder="Поиск:">
-          <svg class="search-icon" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115 7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z"/></svg>
+          <label>
+            <input aria-label="Поиск" type="search" placeholder="Поиск:">
+            <svg class="search-icon" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115 7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z"/></svg>
+          </label>
         </form>
         <div class="function-button">
           <a class="bookmarks" href="#">
@@ -114,7 +116,7 @@
         </div>
         <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 9000</h3>
-          <img src="img/bfg 9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
+          <img src="img/bfg-9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
           <div class="buy-hidden">
             <a class="button button-buy" href="#">
               <svg class="icon-buy" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z"/></g></svg>
@@ -128,7 +130,7 @@
         <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 3000</h3>
           <span class="new_shield">NEW</span>
-          <img src="img/bfg 3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
+          <img src="img/bfg-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
           <div class="buy-hidden">
             <a class="button button-buy" href="#">
               <svg class="icon-buy" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z"/></g></svg>
@@ -141,7 +143,7 @@
         </article>
         <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 6000</h3>
-          <img src="img/bfg 6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
+          <img src="img/bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
           <div class="buy-hidden">
             <a class="button button-buy" href="#">
               <svg class="icon-buy" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z"/></g></svg>
@@ -155,7 +157,7 @@
         <article class="goods-item">
           <h3>Перфоратор BOSCH BFG 2000</h3>
           <span class="new_shield">NEW</span>
-          <img src="img/bfg 2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
+          <img src="img/bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
           <div class="buy-hidden">
             <a class="button button-buy" href="#">
               <svg class="icon-buy" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z"/></g></svg>
@@ -218,15 +220,12 @@
         </p>
         <ul class="transportation-list">
           <li class="transportation-item">
-            <svg width="25" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#EE3643" d="M0 0h25v2H0z"/></svg>
             Деловые линии
           </li>
           <li class="transportation-item">
-            <svg width="25" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#EE3643" d="M0 0h25v2H0z"/></svg>
             Автотрейдинг
           </li>
           <li class="transportation-item">
-            <svg width="25" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#EE3643" d="M0 0h25v2H0z"/></svg>
             ЖелДорЭкспедиция
           </li>
         </ul>
