@@ -255,7 +255,6 @@ img{
   width: 940px;
   height: 60px;
   text-align: center;
-
 }
 
 .main-nav ul{
@@ -704,7 +703,6 @@ img{
 
 .lk-user-link:active{
   color: var(--basic-dull-gray);
-
 }
 
 /*Main catalog*/
