@@ -334,11 +334,6 @@ img{
 /*Main*/
 /*Товары*/
 
-.center{
-  display: grid;
-  grid-template-rows: repeat(5, min-content);
-}
-
 .button{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
@@ -356,15 +351,10 @@ img{
   background-color: var(--basic-dark-red);
 }
 
-.offers{
-  width: 940px;
-  margin: 63px auto 55px auto;
-  display: grid;
-
-}
-
 .offers-list{
   display: grid;
+  width: 940px;
+  margin: 63px auto 55px auto;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, min-content);
   gap: 20px;
@@ -408,9 +398,7 @@ img{
 }
 
 .offers-item{
-  display: inline-block;
-  width: 300px;
-  height: 123px;
+  min-height: 123px;
 }
 
 .offers-item a{
@@ -447,15 +435,12 @@ img{
   background-color: var(--basic-dark);
   grid-area: s;
   display: grid;
-  width: 620px;
-  height: 266px;
-  grid-template-columns: 216px 109px 1fr;
-  grid-template-rows: 104px 97px 65px;
+  grid-template-rows: min-content min-content;
 }
 
 .slider img{
-  grid-column: 1/-1;
   grid-row: 1/-1;
+  z-index: 1;
 }
 
 .slider p{
@@ -465,24 +450,23 @@ img{
 
 .slider-top{
   background-color: var(--basic-transparented-black);
-  grid-column: 1/-1;
-  grid-row: 1/2;
+  z-index: 2;
 }
 
 .slider-button-left{
-  grid-column: 1/2;
-  grid-row: 2/3;
+
 }
 
 .slider-button-right{
-  grid-column: -1/-2;
-  grid-row: 2/3;
+
 }
 
 .slider .button-container{
-  grid-column: 1/2;
-  grid-row: -1/-2;
   padding: 0 0 27px 24px;
+}
+
+.button-container a{
+  padding: 11px 40px 9px 40px;
 }
 
 .slider-drill{
@@ -515,11 +499,10 @@ img{
   text-transform: uppercase;
 }
 
-.goods{
+.goods-container{
   display: grid;
   width: 940px;
-  margin: 0 auto;
-  grid-template-rows: min-content min-content;
+  margin: 0 auto 70px auto;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px
 }
@@ -529,9 +512,16 @@ img{
 }
 
 .main-title{
-  display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: repeat(2, 1fr);
+  width: 940px;
+  margin: 0 auto 20px auto;
+}
+
+.goods-button-container{
+  justify-self: right;
+}
+
+.goods-button-container .button{
+  padding: 11px 24px 9px;
 }
 
 .goods-item{
@@ -605,7 +595,7 @@ img{
 .manufacturers-logos{
   display: grid;
   width: 940px;
-  margin: 70px auto 70px auto;
+  margin: 0 auto 70px auto;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
@@ -642,11 +632,12 @@ img{
   display: grid;
   width: 940px;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
 }
 
 .services-info{
   grid-column: 1/-1;
+  margin-bottom: 67px;
 }
 
 .services-buttons{
@@ -655,17 +646,37 @@ img{
   padding-right: 80px;
 }
 
-.img-car{
+.services-item{
   grid-column: 2/-1;
-  grid-row: 2/3;
-  z-index: 1;
-  justify-self: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
+/*
 .delivery{
-  grid-column: 2/-1;
-  grid-row: 2/3;
+  display: none;
+}
+
+.guarantee{
+  display: none;
+}
+
+.credit{
+  display: none;
+}
+*/
+
+.services-text{
+  grid-column: 1/2;
+  grid-row: 1/2;
   z-index: 2;
+}
+
+.img-services{
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 1;
+  justify-self: right;
 }
 
 .services h3,
