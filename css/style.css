@@ -764,16 +764,18 @@ img{
 
 .footer-site-nav{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, min-content);
+  justify-self: right;
   text-align: right;
+  gap: 59px;
 }
 
 .footer-offers-nav{
-  grid-column: 2/3;
-  grid-row: 2/3;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, min-content);
+  justify-self: right;
   text-align: right;
+  gap: 59px;
 }
 
 .footer-contacts{
