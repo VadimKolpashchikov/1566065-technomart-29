@@ -934,6 +934,15 @@ img{
 
 /*Main catalog*/
 
+.center-catalog-container{
+  width: 940px;
+  margin: 0 auto;
+}
+
+.breadcrumbs{
+  margin-top: 21px;
+}
+
 .breadcrumbs .breadcrumbs-item{
   font-size: 13px;
   line-height: 18px;
@@ -1001,7 +1010,29 @@ img{
   background-color: var(--basic-background);
 }
 
-.filter h3,
+.filter-goods-container{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.goods-catalog{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sorting{
+  grid-column: 1/-1;
+}
+
+.paginatinon {
+  grid-column: 1/-1;
+  margin-top: 48px;
+  margin-bottom: 59px;
+}
+
+.filter-title h3,
 .sorting h3{
   font-size: 13px;
   line-height: 18px;
@@ -1009,7 +1040,7 @@ img{
   text-transform: uppercase;
 }
 
-.filter h3,
+.filter-title,
 .sorting,
 .price input{
   background-color: var(--basic-filter-gray);
@@ -1080,7 +1111,7 @@ img{
 }
 
 .check{
-  padding-left: 130px;
+  padding-left: 27px;
 }
 
 /*Чекбоксы*/
@@ -1251,6 +1282,12 @@ img{
 
 .puncher-info{
   background-color: var(--basic-background);
+}
+
+.puncher-info-container{
+  width: 940px;
+  margin: 0 auto;
+  padding: 64px 0 68px;
 }
 
 .puncher-info h2{
