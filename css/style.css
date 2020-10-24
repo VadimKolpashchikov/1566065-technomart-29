@@ -507,8 +507,9 @@ img{
   line-height: 36px;
   background-color: var(--basic-dark);
   grid-area: s;
-  display: grid;
-  grid-template-rows: min-content min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .slider img{
@@ -519,11 +520,18 @@ img{
 .slider p{
   font-size: 18px;
   line-height: 24px;
+  padding-top: 5px;
 }
 
 .slider-top{
   background-color: var(--basic-transparented-black);
-  z-index: 2;
+  padding: 23px 24px 16px 24px;
+}
+
+.slider-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px 5px 24px;
 }
 
 .slider-button-left{
@@ -535,7 +543,7 @@ img{
 }
 
 .slider .button-container{
-  padding: 0 0 27px 24px;
+  padding: 24px 24px 27px 24px;
 }
 
 .button-container a{
