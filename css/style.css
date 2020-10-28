@@ -84,6 +84,7 @@ img{
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
+  margin: -1px;
   overflow: hidden;
 }
 
@@ -156,6 +157,15 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-function .main-logo:before{
+  content: "";
+  width: 220px;
+  height: 5px;
+  background-color: var(--basic-logo-red);
+  position: absolute;
+  top: 42px;
 }
 
 .main-logo img{
@@ -482,6 +492,7 @@ img{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .offers-item a{
@@ -507,11 +518,14 @@ img{
   fill: var(--basic-white);
 }
 
-.new_shield{
-  font-size: 14px;
-  line-height: 18px;
-  color: var(--basic-white);
-  background-color: var(--basic-red);
+.new-shield:after{
+  content: url("../img/new.svg");
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .slider{
@@ -638,6 +652,7 @@ img{
   border: var(--basic-special-gray) 1px solid;
   max-width: 220px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .goods-img-container{
@@ -1032,6 +1047,7 @@ img{
 .footer-logo{
   height: 63px;
   margin-bottom: 22px;
+  border-bottom: 5px solid var(--basic-logo-red);
 }
 
 .footer-site-nav{
@@ -1434,10 +1450,6 @@ img{
   margin-bottom: 22px;
 }
 
-.radio:last-child{
-  margin-bottom: 37px;
-}
-
 .filter button{
   font-size: 13px;
   line-height: 18px;
@@ -1449,6 +1461,7 @@ img{
   padding: 9px;
   cursor: pointer;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 /*Чекбоксы*/
@@ -1576,13 +1589,24 @@ img{
 }
 
 .sorting h3{
-  margin-right: 90px;
+  width: 175px;
+  margin-right: 45px;
+  flex-shrink: 0;
+}
+
+.sorting-item-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .sorting-container{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 0;
   width: 43px;
   height: 10px;
 }
@@ -1604,7 +1628,7 @@ img{
   fill: var(--basic-red);
 }
 
-.sorting .sorting-item{
+.sorting-item{
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1612,7 +1636,7 @@ img{
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--basic-red);
-  padding: 0 15px;
+  margin-right: 45px;
 }
 
 .sorting .sorting-item-active{
@@ -1633,8 +1657,7 @@ img{
 
 .paginatinon {
   grid-column: 1/-1;
-  margin-top: 28px;
-  margin-bottom: 54px;
+  margin: 28px -5px 54px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1648,11 +1671,7 @@ img{
   color: var(--basic-black);
   border: var(--basic-special-light-gray) 1px solid;
   border-radius: 2px;
-  margin: 0 5px 5px;
-}
-
-.paginatinon a:first-child{
-  margin-left: 0;
+  margin: 5px 5px;
 }
 
 .paginatinon-number{
