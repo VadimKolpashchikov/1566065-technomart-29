@@ -245,7 +245,7 @@ img{
 .function-button .bookmarks{
   flex-grow: 1;
   flex-shrink: 0;
-  padding: 10px 12px 8px 5px;
+  padding: 9px 28px 9px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -254,7 +254,7 @@ img{
 .function-button .basket{
   flex-grow: 1;
   flex-shrink: 0;
-  padding: 10px 11px 8px 9px;
+  padding: 9px 15px 9px 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,8 +293,11 @@ img{
   opacity: 0.3;
 }
 
-.full-basket{
+.function-button .full-basket{
   background-color: var(--basic-red);
+  flex-grow: 0;
+  padding-left: 12px;
+  padding-right: 21px;
 }
 
 .function-button .full-basket:active{
