@@ -450,7 +450,7 @@ img{
 .site-nav a{
   display: flex;
   justify-content: center;
-  padding: 16px 28px ;
+  padding: 16px 28px;
 }
 
 .header-container-3{
@@ -718,7 +718,6 @@ img{
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-
 
 .main-title{
   background-color: var(--basic-extra-light);
@@ -1424,7 +1423,7 @@ img{
   margin: 0 auto;
 }
 
-.breadcrumbs {
+.breadcrumbs{
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -1831,7 +1830,7 @@ img{
   text-decoration-style: solid;
 }
 
-.paginatinon {
+.paginatinon{
   grid-column: 1/-1;
   margin: 25px -6px 54px -5px;
   display: flex;
@@ -1930,7 +1929,7 @@ img{
 }
 
 /*Форма*/
-.modal-contacts {
+.modal-contacts{
   font-family: "Cuprum", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
