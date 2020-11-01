@@ -49,6 +49,9 @@
   --basic-special-filter: #444444;
   --basic-modal-gray: #F4F4F4;
   --basic-modal-red: #FF5257;
+  --basic-rang-shadow: rgba(171,171,171,0.3);
+  --basic-range-green: #00ca74;
+  --basic-range-gray: #D7DCDE;
   /*Footer*/
   --special-yellow: #FFD180;
   --special-transparent-yellow: rgba(255,209,128,0.5);
@@ -1566,7 +1569,9 @@ img{
   cursor: pointer;
 }
 
-.range{
+/*Range*/
+
+.price .range{
   display: flex;
   align-items: center;
   width: 220px;
@@ -1575,16 +1580,81 @@ img{
   margin: 11px 0 9px;
   background-color: var(--basic-filter-gray);
   box-sizing: border-box;
+  cursor: default;
 }
 
 .range input{
   width: 180px;
-  border-radius: 0;
   -webkit-appearance: none;
+  height: 24px;
 }
 
-.range-input{
-  width: 100%;
+.range input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background-image: url("../img/filter-thumb.svg");
+  border-radius: 50%;
+  box-shadow: 0 2px 0 var(--basic-rang-shadow);
+}
+
+.range input::-moz-range-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background-image: url("../img/filter-thumb.svg");
+  border-radius: 50%;
+  box-shadow: 0 2px 0 var(--basic-rang-shadow);
+}
+
+.range input::-ms-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  background-image: url("../img/filter-thumb.svg");
+  border-radius: 50%;
+  box-shadow: 0 2px 0 var(--basic-rang-shadow);
+}
+
+.range input:focus{
+  outline: none;
+}
+
+.range input::-webkit-slider-runnable-track{
+  height: 2px;
+  background-image:
+    linear-gradient(
+      to right,
+      var(--basic-range-gray) 10%,
+      var(--basic-range-green) 10%,
+      var(--basic-range-green) 75%,
+      var(--basic-range-gray) 75%
+    )
+}
+
+.range input::-moz-range-track{
+  height: 2px;
+  background-color: var(--basic-range-gray);
+}
+
+.range input::-ms-track{
+  height: 1px;
+  border-color: transparent;
+  color: transparent;
+  background-color: #D7DCDE/*var(--basic-range-gray)*/;
+  cursor: pointer;
+}
+
+.range input::-ms-fill-lower {
+  background-color:  #00ca74/*var(--basic-range-green)*/;
+  height: 2px;
+}
+.range input::-moz-range-progress {
+  background-color: var(--basic-range-green);
+  height: 2px;
 }
 
 .price-input{
@@ -1802,7 +1872,7 @@ img{
   fill: var(--basic-red);
 }
 
-.sorting-item{
+.sorting-item-container .sorting-item{
   margin-right: 45px;
   font-size: 13px;
   line-height: 18px;
