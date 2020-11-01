@@ -1632,7 +1632,7 @@ img{
       var(--basic-range-green) 10%,
       var(--basic-range-green) 75%,
       var(--basic-range-gray) 75%
-    )
+    );
 }
 
 .range input::-moz-range-track{
