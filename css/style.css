@@ -1580,81 +1580,59 @@ img{
   margin: 11px 0 9px;
   background-color: var(--basic-filter-gray);
   box-sizing: border-box;
-  cursor: default;
 }
 
-.range input{
+.slider-range{
   width: 180px;
-  -webkit-appearance: none;
-  height: 24px;
-}
-
-.range input::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  background-image: url("../img/filter-thumb.svg");
-  border-radius: 50%;
-  box-shadow: 0 2px 0 var(--basic-rang-shadow);
-}
-
-.range input::-moz-range-thumb{
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  background-image: url("../img/filter-thumb.svg");
-  border-radius: 50%;
-  box-shadow: 0 2px 0 var(--basic-rang-shadow);
-}
-
-.range input::-ms-thumb{
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  margin-top: 2px;
-  background-image: url("../img/filter-thumb.svg");
-  border-radius: 50%;
-  box-shadow: 0 2px 0 var(--basic-rang-shadow);
-}
-
-.range input:focus{
-  outline: none;
-}
-
-.range input::-webkit-slider-runnable-track{
   height: 2px;
-  background-image:
-    linear-gradient(
-      to right,
-      var(--basic-range-gray) 10%,
-      var(--basic-range-green) 10%,
-      var(--basic-range-green) 75%,
-      var(--basic-range-gray) 75%
-    );
-}
-
-.range input::-moz-range-track{
-  height: 2px;
+  position: relative;
+  text-align: left;
   background-color: var(--basic-range-gray);
 }
 
-.range input::-ms-track{
-  height: 1px;
-  border-color: transparent;
-  color: transparent;
-  background-color: #D7DCDE/*var(--basic-range-gray)*/;
-  cursor: pointer;
+.slider-range-progress{
+  display: block;
+  height: 100%;
+  width: 75%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--basic-range-green);
+  z-index: 1;
 }
 
-.range input::-ms-fill-lower {
-  background-color:  #00ca74/*var(--basic-range-green)*/;
-  height: 2px;
+.rang-thumb{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: -10px -8px 0 -8px;
+  position: absolute;
+  background-image: url("../img/filter-thumb.svg");
+  border-radius: 50%;
+  box-shadow: 0 2px 0 var(--basic-rang-shadow);
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
 }
-.range input::-moz-range-progress {
-  background-color: var(--basic-range-green);
-  height: 2px;
+
+.rang-thumb-min{
+  top: 0;
+  left: 0;
+}
+
+.rang-thumb-max{
+  top: 0;
+  right: 25%;
+}
+
+.rang-thumb:hover,
+.rang-thumb:focus{
+  background-image: url("../img/filter-thumb-active.svg");
+}
+
+.rang-thumb:active{
+  background-image: url("../img/filter-thumb-active.svg");
+  box-shadow: 0 2px 2px var(--basic-range-green);
 }
 
 .price-input{
@@ -1704,7 +1682,17 @@ img{
   text-align: center;
   background-color: var(--basic-white);
   border: var(--basic-special-light-gray) 1px solid;
+  outline: none;
   cursor: pointer;
+}
+
+.filter button:hover,
+.filter button:focus{
+  border: var(--basic-red) 1px solid;
+}
+
+.filter button:active{
+  background-color: var(--basic-red);
 }
 
 /*Чекбоксы*/

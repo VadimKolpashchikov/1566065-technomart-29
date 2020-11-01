@@ -95,17 +95,13 @@
             <form action="https://echo.htmlacademy.ru" method="get">
               <fieldset class="price">
                 <legend>ЦЕНА:</legend>
-                <label class="range">
-                  <input
-                    class="range-input"
-                    type="range"
-                    name="range-price"
-                    min="0"
-                    max="35000"
-                    step="1"
-                    value="3000"
-                  >
-                </label>
+                <div class="range">
+                  <div class="slider-range">
+                    <div class="slider-range-progress"></div>
+                    <span class="rang-thumb rang-thumb-min" tabindex="0"></span>
+                    <span class="rang-thumb rang-thumb-max" tabindex="0"></span>
+                  </div>
+                </div>
                 <div class="price-range-input">
                   <input class="price-input" type="number" name="price-floor" value="0" aria-label="price floor">
                   <input class="price-input" type="number" name="maximum-price" value="30000" aria-label="maximum price">
