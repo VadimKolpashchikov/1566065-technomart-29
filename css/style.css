@@ -687,7 +687,6 @@ img{
   padding: 0;
   background-color: transparent;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -702,7 +701,6 @@ img{
   margin: 5px 5px;
   background-color: var(--basic-white);
   border-radius: 50%;
-  outline: none;
   border: none;
   cursor: pointer;
 }
@@ -1978,9 +1976,9 @@ img{
   background-repeat: no-repeat;
   background-position: center;
   border: none;
-  outline: none;
   box-sizing: border-box;
   cursor: pointer;
+  tab-index: 0;
 }
 
 .modal-close:active{
@@ -2074,7 +2072,6 @@ img{
   align-items: center;
   border: none;
   box-sizing: border-box;
-  outline: none;
   cursor: pointer;
 }
 

@@ -19,14 +19,14 @@
           </a>
           <form class="search" action="https://echo.htmlacademy.ru" method="get">
             <label class="search-label">
-              <input aria-label="Поиск" type="search" placeholder="Поиск:" name="search">
+              <input aria-label="search" type="search" placeholder="Поиск:" name="search">
               <svg class="search-icon" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115 7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z"/></svg>
             </label>
           </form>
           <div class="function-button">
-            <a class="bookmarks full-bookmarks" href="#">
+            <a class="bookmarks" href="#">
               <svg class="icon-bookmark" width="14" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/></svg>
-              Закладки: 1
+              Закладки: 0
             </a>
             <a class="basket full-basket" href="#">
               <svg class="icon-cart" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z"/></g></svg>
@@ -50,7 +50,7 @@
               <svg class="icon-user icon-lk" width="20" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z"/></svg>
               <p class="name">Равшан Джамшутович</p>
             </a>
-            <a class="login-link-exit" href="#">
+            <a class="login-link-exit" href="#" aria-label="exit account">
               <svg class="icon-user icon-login-exit" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z"/><path d="M2.10591 13.952V3.048C2.12391 2.672 2.27691 1.991 3.11591 1.991H8.14291V0H3.11591C0.937914 0 0.111914 1.81 0.0869141 3.027V13.973C0.111914 15.189 0.937914 17 3.11591 17H8.14291V15.01H3.11591C2.27691 15.01 2.12391 14.327 2.10591 13.952Z"/></svg>
             </a>
           </div>
@@ -79,7 +79,7 @@
       <h1 class="display-none">Каталог товаров интернет-магазина «Техномарт»</h1>
       <div class="center-catalog-container">
         <div class="breadcrumbs">
-          <a class="icon-home-link" href="index.html">
+          <a class="icon-home-link" href="index.html" aria-label="main page">
             <svg class="icon-home" width="14" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z"/><path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z"/></svg>
           </a>
           <a class="breadcrumbs-item" href="#">Каталог</a>
@@ -174,10 +174,10 @@
                 <a class="sorting-item" href="#">По функционалу</a>
               </div>
               <div class="sorting-container">
-                <a class="link-sorting-up" href="#">
+                <a class="link-sorting-up" href="#" aria-label="sorting up">
                   <svg class="icon-sorting icon-sorting-up icon-sorting-active" width="11" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L11 10H0"/></svg>
                 </a>
-                <a class="link-sorting-down" href="#">
+                <a class="link-sorting-down" href="#" aria-label="sorting down">
                   <svg class="icon-sorting icon-sorting-down" width="11" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L11 10H0"/></svg>
                 </a>
               </div>
@@ -326,6 +326,7 @@
               </div>
             </article>
             <div class="paginatinon">
+              <h3 class="display-none">Навигация по странице</h3>
               <a class="paginatinon-number paginatinon-number-active" href="#">1</a>
               <a class="paginatinon-number" href="#">2</a>
               <a class="paginatinon-number" href="#">3</a>
