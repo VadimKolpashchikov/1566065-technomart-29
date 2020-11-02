@@ -843,7 +843,8 @@ img{
   box-sizing: border-box;
 }
 
-.goods-item:hover .buy-hidden{
+.goods-item:hover .buy-hidden,
+.goods-item:focus .buy-hidden{
   opacity: 1;
 }
 
@@ -1628,6 +1629,7 @@ img{
 .rang-thumb:hover,
 .rang-thumb:focus{
   background-image: url("../img/filter-thumb-active.svg");
+  border: 1px solid var(--basic-range-green);
 }
 
 .rang-thumb:active{
