@@ -387,6 +387,10 @@ img{
   margin-left: 9px;
 }
 
+.main-header .user-header-hidden{
+  display: none;
+}
+
 .user-header a{
   display: flex;
   align-items: center;
