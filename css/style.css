@@ -1074,6 +1074,7 @@ img{
   box-sizing: border-box;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .services-button-active{
