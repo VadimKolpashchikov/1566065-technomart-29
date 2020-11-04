@@ -975,7 +975,7 @@ img{
 }
 
 .services-buttons:after{
-  content: url("../img/shade .png");
+  content: url("../img/shade.png");
   width: 10px;
   height: 279px;
   position: absolute;
@@ -1606,8 +1606,9 @@ img{
   border-radius: 50%;
   box-shadow: 0 2px 0 var(--basic-rang-shadow);
   z-index: 2;
-  cursor: pointer;
   outline: none;
+  outline-offset: -2px;
+  cursor: pointer;
 }
 
 .rang-thumb-min{
@@ -1623,12 +1624,12 @@ img{
 .rang-thumb:hover,
 .rang-thumb:focus{
   background-image: url("../img/filter-thumb-active.svg");
-  border: 1px solid var(--basic-range-green);
+  box-shadow: 0 0 0 1px var(--basic-range-green), 0 2px 0 var(--basic-rang-shadow);
 }
 
 .rang-thumb:active{
   background-image: url("../img/filter-thumb-active.svg");
-  box-shadow: 0 2px 2px var(--basic-range-green);
+  box-shadow: 0 0 0 1px var(--basic-range-green), 0 2px 2px var(--basic-range-green);
 }
 
 .price-input{
@@ -1678,18 +1679,19 @@ img{
   text-align: center;
   background-color: var(--basic-white);
   border: var(--basic-special-light-gray) 1px solid;
+  border-radius: 2px;
   outline: none;
+  box-sizing: border-box;
   cursor: pointer;
 }
 
 .filter button:hover,
 .filter button:focus{
-  border: var(--basic-red) 1px solid;
+  border-color: var(--basic-dull-gray);
 }
 
 .filter button:active{
-  color: var(--basic-white);
-  background-color: var(--basic-red);
+  border-color: var(--basic-red);
 }
 
 /*Чекбоксы*/
