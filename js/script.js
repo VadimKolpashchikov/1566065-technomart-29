@@ -1,6 +1,6 @@
 let bookmarks = document.querySelector('.bookmarks');
 let buttonBookmarks = document.querySelectorAll('.button-in-bookmarks');
-for (let i=0; i<buttonBookmarks.length; i++){
+for (let i=0; i<buttonBookmarks.length; i++) {
   buttonBookmarks[i].addEventListener('click', function () {
     bookmarks.classList.add('full-bookmarks');
   });
@@ -11,7 +11,7 @@ for (let i=0; i<buttonBookmarks.length; i++){
 let basket = document.querySelector('.basket');
 let buttonBuy = document.querySelectorAll('.button-buy');
 let modalAdded = document.querySelector('.modal-added-to-cart');
-for (let i=0; i<buttonBuy.length; i++){
+for (let i=0; i<buttonBuy.length; i++) {
   buttonBuy[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     basket.classList.add('full-basket');
@@ -25,7 +25,7 @@ modalAddedClose.addEventListener('click', function () {
 });
 
 modalAddedClose.addEventListener('keydown', function (evt) {
-  if(evt.keyCode === 27){
+  if(evt.keyCode === 27) {
     modalAdded.classList.remove('modal-visible');
   }
 });
@@ -149,6 +149,12 @@ if (contactsButton !== null) {
   contactsButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalContacts.classList.add('modal-visible');
+    if (storage) {
+      contactsName.value = storage;
+      contactsEmail.focus();
+    } else {
+      contactsName.focus();
+    }
   });
 }
 
@@ -156,6 +162,7 @@ let modalContactsClose = document.querySelector('.modal-contacts-close');
 if (modalContactsClose !== null) {
   modalContactsClose.addEventListener('click', function () {
     modalContacts.classList.remove('modal-visible');
+    modalContacts.classList.remove("modal-error");
   });
 }
 
@@ -163,6 +170,34 @@ if (modalContactsClose !== null) {
   modalContactsClose.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       modalContacts.classList.remove('modal-visible');
+      modalContacts.classList.remove("modal-error");
+    }
+  });
+}
+
+let isStorageSupport = true;
+let storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+let contactsForm = document.querySelector('.modal-contacts-form');
+let contactsName = document.querySelector('.modal-contacts-name');
+let contactsEmail = document.querySelector('.modal-contacts-email');
+if (contactsForm !== null) {
+  contactsForm.addEventListener("submit", function (evt) {
+    if(!contactsName.value || !contactsEmail.value) {
+      evt.preventDefault();
+      modalContacts.classList.remove("modal-error");
+      modalContacts.offsetWidth = modalContacts.offsetWidth;
+      modalContacts.classList.add("modal-error");
+    }else {
+      if (isStorageSupport) {
+        localStorage.setItem("login", contactsName.value);
+      }
     }
   });
 }
