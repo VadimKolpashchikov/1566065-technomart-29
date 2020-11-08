@@ -140,6 +140,7 @@ if (modalMapClose !== null) {
     }
   });
 }
+
 //Форма обратной связи
 
 let modalContacts = document.querySelector('.modal-contacts');
