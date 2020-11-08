@@ -60,7 +60,6 @@ if (sliderNumber2 !== null) {
   });
 }
 
-
 if (sliderLeft !== null) {
   sliderLeft.addEventListener('click', function () {
     slider.classList.remove('slider-background-2');
@@ -166,13 +165,3 @@ if (modalContactsClose !== null) {
     }
   });
 }
-
-
-
-
-
-
-
-
-
-
