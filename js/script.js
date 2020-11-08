@@ -80,10 +80,10 @@ let servicesCredit = document.querySelector('.services-credit');
 let delivery = document.querySelector('.delivery');
 let guarantee = document.querySelector('.guarantee');
 let credit = document.querySelector('.credit');
-let servicesClear = function(){
-document.querySelector('.services-button-active').classList.remove('services-button-active');
-document.querySelector('.services-item-visible').classList.remove('services-item-visible');
-}
+let servicesClear = function () {
+  document.querySelector('.services-button-active').classList.remove('services-button-active');
+  document.querySelector('.services-item-visible').classList.remove('services-item-visible');
+};
 
 servicesDelivery.addEventListener('click', function () {
   servicesClear();
